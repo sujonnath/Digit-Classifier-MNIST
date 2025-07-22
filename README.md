@@ -21,6 +21,7 @@ A simple web app to draw handwritten digits (0-9) and recognize them using a tra
 digitclassifier/
 
 ├── static/
+
     ├── script.js
     └── style.css
 ├── templates/
