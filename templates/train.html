@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Train a New Model</h1>
+    <form action="/train" method="post">
+        <div class="buttons">
+            <button type="submit" style="background: #4CAF50;">Start Training</button>
+            <a href="/" class="back-button">Back to Home</a>
+        </div>
+    </form>
+
+    {% if logs %}
+        <pre>{{ logs }}</pre>
+    {% endif %}
+
+</body>
+</html>
