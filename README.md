@@ -3,6 +3,7 @@
 A simple web app to draw handwritten digits (0-9) and recognize them using a trained PyTorch model.
 
  ![Screenshot](https://github.com/sujonnath/Digit-Classifier-MNIST/blob/main/2025-07-22%2017_37_56-Window.png)
+ ![Screenshot](https://github.com/sujonnath/Digit-Classifier-MNIST/blob/main/2025-07-22%2017_54_33-Window.png).
 
 ---
 
