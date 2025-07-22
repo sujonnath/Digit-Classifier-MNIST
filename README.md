@@ -19,6 +19,7 @@ A simple web app to draw handwritten digits (0-9) and recognize them using a tra
 📂 Project Structure
 
 digitclassifier/
+
 ├── static/
 │   ├── script.js
 │   └── style.css
