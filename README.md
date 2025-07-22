@@ -16,7 +16,7 @@ A simple web app to draw handwritten digits (0-9) and recognize them using a tra
 
 📂 Project Structure
 
-Digit-Classifier-MNIST/
+digitclassifier/
 ├── static/
 │   ├── script.js
 │   └── style.css
@@ -27,7 +27,7 @@ Digit-Classifier-MNIST/
 │   └── mnist_model.pt
 ├── debug_final_input.png
 ├── app.py
-├── mnist_model.py
+├── model_builder.py
 ├── README.md
 
 ⚙️ Installation
@@ -36,10 +36,12 @@ Digit-Classifier-MNIST/
 
 git clone https://github.com/aronno1920/mnist-digit-classifier.git
 cd mnist-digit-classifier
+
 2. Create and activate a virtual environment (optional but recommended)
 python -m venv venv 
 venv\Scripts\activate # Windows
 source venv/bin/activate # macOS/Linux
+
 3. Install dependencies
 pip install -r requirements.txt
 pip install torch torchvision flask pillow numpy
@@ -49,6 +51,7 @@ If you want to retrain the model on the MNIST dataset:
 
 python model.py
 This will train the model and save the weights to model/mnist_model.pt.
+
 5. Run the Flask app:
 python app.py
 
