@@ -73,8 +73,6 @@ python app.py
     Matplotlib
     NumPy
 
-https://github.com/sujonnath/Digit-Classifier-MNIST/blob/main/2025-07-22%2017_37_56-Window.png
-
 
 
 
