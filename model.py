@@ -3,15 +3,14 @@
 import os
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, random_split
 import numpy as np
 
-
 # Check if GPU is available
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
 
 # ---------- Define Model ----------
 class MNISTModel(nn.Module):
@@ -38,6 +37,8 @@ class MNISTModel(nn.Module):
 
     def forward(self, x):
         return self.net(x)
+
+
     
     # ---------- EarlyStopping ----------
 class EarlyStopping:
@@ -62,15 +63,18 @@ class EarlyStopping:
             if self.counter >= self.patience:
                 self.early_stop = True
 
-
 # ---------- Train Function ----------
 def train_model():
     os.makedirs('model', exist_ok=True)
 
     # Transforms
+    #transform = transforms.Compose([
+    #    transforms.ToTensor(),
+    #   transforms.Lambda(lambda x: x.view(-1))  # Flatten 28x28 → 784
+    #])
     transform = transforms.Compose([
         transforms.ToTensor(),
-        transforms.Lambda(lambda x: x.view(-1))  # Flatten 28x28 → 784
+        transforms.Normalize((0.1307,), (0.3081,))
     ])
 
     # Load MNIST
@@ -147,9 +151,10 @@ def train_model():
     model.load_state_dict(torch.load('model/mnist_model.pt'))
     print("Training complete.")
 
-    return model, history
-
+    #return model, history
+    return model
 
 # Run training if this script is executed directly
 if __name__ == "__main__":
-    model, history = train_model()
+    #model, history = train_model()
+    train_model()
