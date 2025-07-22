@@ -22,9 +22,8 @@ digitclassifier/
 
 ├── static/
 
-│   ├── script.js
-
-│   └── style.css
+    ├── script.js
+    └── style.css
 ├── templates/
 │   ├── index.html
 │   └── train.html
