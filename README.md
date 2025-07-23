@@ -34,7 +34,8 @@ digitclassifier/
 └── README.md
 ```
 ⚙️ Installation
-...
+```
+
 1. Clone the repository:
 
 git clone https://github.com/sujonnath/Digit-Classifier-MNIST.git
@@ -57,7 +58,9 @@ This will train the model and save the weights to model/mnist_model.pt.
 
 5. Run the Flask app:
 python app.py
-...
+
+```
+
 🧠 Model Summary
 
     Input: 28x28 grayscale images (flattened or CNN input)
